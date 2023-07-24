@@ -1,0 +1,22 @@
+﻿@model MvcCrudProje.Data.Entities.Departman
+@{
+    ViewBag.Title = "Ekle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Çalışan Ekleme Sayfası</h2>
+
+@using (Html.BeginForm("Ekle", "Departman", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Ad)
+        @Html.TextBoxFor(m => m.Ad, new { @class = "form-control" })
+
+        @Html.HiddenFor(m => m.ID)
+
+        <button type="submit" class="btn btn-success">Departman Ekle</button>
+
+    </div>
+}
+
+

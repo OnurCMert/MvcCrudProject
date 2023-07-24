@@ -1,0 +1,21 @@
+﻿@model MvcCrudProje.Data.Entities.Departman
+@{
+    ViewBag.Title = "Guncelle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Departman Guncelleme Ekranı</h2>
+
+@using (Html.BeginForm("Guncelle", "Departman", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Ad)
+        @Html.TextBoxFor(m => m.Ad, new { @class = "form-control" })
+
+        @*@Html.HiddenFor(m => m.ID)*@
+
+        <button type="submit" class="btn btn-success">Departman Güncelle</button>
+
+    </div>
+}
+
